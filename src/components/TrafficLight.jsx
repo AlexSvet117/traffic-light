@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaDove } from 'react-icons/fa';
 
 function TrafficLight() {
 
@@ -15,7 +16,15 @@ function TrafficLight() {
   };
 
   return (
-  <div className="d-flex flex-column flex-md-row p-1 mt-lg-5 gap-4 py-md-1 justify-content-center align-items-center bg-black rounded-4">
+
+<div className="position-auto">
+  <div className="vertical-line left-line"></div>
+  <div className="vertical-line center-line"></div>
+  <div className="vertical-line right-line"></div>
+  
+
+  <div className="d-flex mb-5 w-auto flex-md-row p-1 mt-lg-5 gap-4 py-md-1 justify-content-center align-items-center bg-black rounded-4">
+    
     <div className="list-group">
         <div 
         className={`rounded-circle bg-danger m-1 ${activeCircle === 'red' ? 'white-shadow' : ''}`}
@@ -34,6 +43,7 @@ function TrafficLight() {
         ></div>
     </div>
   </div>
+</div>
 
   )
 }
